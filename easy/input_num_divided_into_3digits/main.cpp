@@ -4,23 +4,16 @@
 using namespace std;
 int main(void)
 {
-    string num;
-    cin >> num;
-
-    int len = num.length();
-    int cnt = 0;
-
-    for (size_t i{0}; i <= len - 1; ++i)
+    string s;
+    cin >> s;
+    int remainder = s.size() % 3;
+    for (size_t i{0}; i < s.size(); i++)
     {
-        cout << num.at(i);
-        cnt++;
-
-        if (cnt == 3 && i != 0)
+        if (i % 3 == remainder && i != 0)
         {
-            if (i != len - 1)
-                cout << ",";
-            cnt = 0;
+            cout << ",";
         }
+        cout << s[i];
     }
     cout << endl;
     return 0;
