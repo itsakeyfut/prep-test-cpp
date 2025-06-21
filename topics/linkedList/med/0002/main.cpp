@@ -14,33 +14,28 @@ class Solution
 public:
     ListNode *addTwoNumbers(ListNode *l1, ListNode *l2)
     {
-        ListNode *dummy = new ListNode();
-        ListNode *res = dummy;
-        int total = 0, carry = 0;
+        ListNode *head = new ListNode(); // ダミーヘッド
+        ListNode *tail = head;
+        int carry = 0;
 
         while (l1 || l2 || carry)
         {
-            total = carry;
+            int val1 = l1 ? l1->val : 0;
+            int val2 = l2 ? l2->val : 0;
+            int sum = val1 + val2 + carry;
+
+            carry = sum / 10;
+            tail->next = new ListNode(sum % 10);
+            tail = tail->next;
 
             if (l1)
-            {
-                total += l1->val;
                 l1 = l1->next;
-            }
             if (l2)
-            {
-                total += l2->val;
                 l2 = l2->next;
-            }
-
-            int num = total % 10;
-            carry = total / 10;
-            dummy->next = new ListNode(num);
-            dummy = dummy->next;
         }
 
-        ListNode *result = res->next;
-        delete res;
+        ListNode *result = head->next;
+        delete head; // ダミーヘッドを解放
         return result;
     }
 };
