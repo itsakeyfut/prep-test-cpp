@@ -65,12 +65,14 @@
 - Container With Most Water (LC 11)
 
 **パターン:**
-```cppint l = 0, r = n - 1;
+```cpp
+int l = 0, r = n - 1;
 while(l < r) {
-// 処理
-if(condition) l++;
-else r--;
+   // 処理
+   if(condition) l++;
+   else r--;
 }
+```
 
 ### Week 4: Sliding Window（4-5問）
 **問題例:**
@@ -79,15 +81,17 @@ else r--;
 - Minimum Window Substring (LC 76)
 
 **パターン:**
-```cppint l = 0;
+```cpp
+int l = 0;
 for(int r = 0; r < n; r++) {
-// window に r を追加
-while(invalid) {
-// window から l を削除
-l++;
+   // window に r を追加
+   while(invalid) {
+      // window から l を削除
+   l++;
+   }
+   // 答えを更新
 }
-// 答えを更新
-}
+```
 
 ### Week 5: Stack（3-4問）
 **問題例:**
@@ -149,19 +153,23 @@ l++;
 - Word Search (LC 79)
 
 **テンプレート:**
-```cppvector<int> path;
+```cpp
+vector<int> path;
 auto backtrack = [&](auto&& self, int start) -> void {
-// 終了条件
-if(終了条件) {
-result.push_back(path);
-return;
-}for(int i = start; i < n; i++) {
-    path.push_back(nums[i]);
-    self(self, i + 1);
-    path.pop_back();  // バックトラック
-}
+   // 終了条件
+   if(終了条件) {
+      result.push_back(path);
+      return;
+   }
+
+   for(int i = start; i < n; i++) {
+      path.push_back(nums[i]);
+      self(self, i + 1);
+      path.pop_back();  // バックトラック
+   }
 };
 backtrack(backtrack, 0);
+```
 
 ### Week 10: Heap + DP 入門（4-5問）
 **Heap 問題:**
