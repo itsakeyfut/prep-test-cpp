@@ -9,14 +9,8 @@
 - [Algorithm and Data Structure Basics](./basics/README.md)
 - [LeetCode Problems](./leetcode/README.md)
 
-## Compile
-
-```sh
-g++ -g main.cpp -o main.exe
-```
-
 ## Execute
 
 ```sh
-./main.exe
+clang++ -o main.exe main.cpp && ./main.exe
 ```
