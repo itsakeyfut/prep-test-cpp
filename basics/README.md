@@ -1,0 +1,48 @@
+# Algorithm and Data Structure Basics
+
+1. 01-dynamic_array
+2. 02-linked_list
+3. 03-stack
+4. 04-queue
+5. 05-deque
+6. 06-hash_map
+7. 07-sort
+    1. 01-bogo
+    2. 02-bubble
+    3. 03-cocktail
+    4. 04-selection
+    5. 05-insertion
+    6. 06-shell
+    7. 07-merge
+    8. 08-quick
+    9. 09-heap
+    10. 10-counting
+    11. 11-radix
+    12. 12-bucket
+8. 08-binary_search
+9. 09-two_pointers
+10. 10-sliding_window
+11. 11-prefix_sum
+12. 12-bit_manipulation
+13. 13-recursion_backtracking
+14. 14-tree_traversal
+15. 15-bst
+16. 16-heap
+17. 17-graph
+18. 18-bfs_dfs
+19. 19-monotonic_stack
+20. 20-greedy
+21. 21-dp
+22. 22-union_find
+23. 23-topological_sort
+24. 24-dijkstra
+25. 25-trie
+26. 26-lru_cache
+27. 27-bellman_ford
+28. 28-floyd_warshall
+29. 29-mst
+30. 30-string_algorithms
+31. 31-fenwick_tree
+32. 32-segment_tree
+33. 33-avl_tree
+34. 34-red_black_tree
