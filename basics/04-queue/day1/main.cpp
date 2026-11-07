@@ -29,7 +29,7 @@ public:
         tail = (tail + 1) % capacity;
         ++count;
     }
-    
+
     void dequeue()
     {
         if (empty())
@@ -42,7 +42,7 @@ public:
     T &front()
     {
         if (empty())
-            std::underflow_error("Queue is empty");
+            throw std::underflow_error("Queue is empty");
 
         return data[head];
     }
