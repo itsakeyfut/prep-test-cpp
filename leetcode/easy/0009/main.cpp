@@ -3,18 +3,18 @@ class Solution
 public:
     bool isPalindrome(int x)
     {
-        if (x < 0)
+        // 負の数と、末尾が0の数（0そのものは除く）は回文にならない
+        if (x < 0 || (x % 10 == 0 && x != 0))
             return false;
 
-        long reverse = 0;
-        int x_clone = x;
-
-        while (x > 0)
+        int reversedHalf = 0;
+        while (x > reversedHalf)
         {
-            reverse = (reverse * 10) + (x % 10);
+            reversedHalf = reversedHalf * 10 + x % 10;
             x /= 10;
         }
 
-        return reverse == x_clone;
+        // 桁数が偶数なら x == reversedHalf、奇数なら真ん中の桁を捨てて比較する
+        return x == reversedHalf || x == reversedHalf / 10;
     }
 };
