@@ -2,40 +2,36 @@
 #include <vector>
 #include <algorithm>
 
-using namespace std;
-
-void bubbleSort(vector<int> &nums)
+void bubbleSort(std::vector<int> &nums)
 {
-    size_t size = nums.size();
-
-    for (size_t i{0}; i < size; ++i)
+    for (std::size_t i{0}; i < nums.size(); ++i)
     {
-        for (size_t j{0}; j < size - 1 - i; ++j)
+        for (std::size_t j{0}; j < nums.size() - 1 - i; ++j)
         {
             if (nums[j] > nums[j + 1])
             {
-                swap(nums[j], nums[j + 1]);
+                std::swap(nums[j], nums[j + 1]);
             }
         }
     }
 }
 
-void print(const vector<int> &nums)
+void print(const std::vector<int> &nums)
 {
     for (int n : nums)
-        cout << n << " ";
-    cout << endl;
+        std::cout << n << " ";
+    std::cout << std::endl;
 }
 
 int main()
 {
-    vector<int> nums{3, 22, 19, 5, 6, 83, 43, 4, 3, 27};
+    std::vector<int> nums{3, 22, 19, 5, 6, 83, 43, 4, 3, 27};
 
-    cout << "BEFORE: ";
+    std::cout << "BEFORE: ";
     print(nums);
     bubbleSort(nums);
 
-    cout << "AFTER: ";
+    std::cout << "AFTER: ";
     print(nums);
 
     return 0;
